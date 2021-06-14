@@ -8,6 +8,10 @@
 
 html {
     font-size: 62.5%;
+
+    @media only screen and (max-width: 33.25em) {
+        font-size: 50%;
+    }
 }
 
 body {
@@ -17,14 +21,53 @@ body {
 .apparel {
     display: flex;
 
+    @media only screen and (max-width: 56.25em) {
+        flex-direction: column;
+    }
+
 
     &__left-section {
         background-image: url(../images/bg-pattern-desktop.svg);
         background-size: cover;
         background-repeat: no-repeat;
-        padding: 6rem 10rem 10rem 15rem;
+        padding: 6rem 20rem 10rem 15rem;
 
-        flex-basis: 55%;
+        width: 60%;
+
+        @media only screen and (max-width: 56.25em) {
+            width: 100%;
+            padding: 0;
+        }
+
+    }
+
+    &__bg-mobile {
+        display: none;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+
+
+        @media only screen and (max-width: 56.25em) {
+            display: block;
+            width: 100%;
+        }
+
+    }
+
+    &__main,
+    &__logo {
+        
+        @media only screen and (max-width: 56.25em) {
+            
+            padding: 6rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+    }
+
     }
 
     &__header { 
@@ -38,6 +81,9 @@ body {
             font-family: "Josefin Sans";
             display: block;
             letter-spacing: 1rem;
+
+      
+
         }
         
         &--2, 
@@ -66,6 +112,22 @@ body {
     &__validate {
         position: relative;
         margin-top: 4rem;
+        width: 35vw;
+
+        @media only screen and (max-width: 56.25em) {
+            width: 65vw;
+            margin: 2rem auto;
+        }
+
+    }
+
+
+
+    &__error-icon {
+        position: absolute;
+        top: 9px;
+        right: 82px;
+        display: none;
     }
 
     &__input {
@@ -80,10 +142,11 @@ body {
             font-family: "Josefin Sans";
             font-weight: 700;
         }
-
+        
         &:active,
         &:focus-visible {
             outline: none;
+            border: 2px solid hsl(0, 36%, 70%);
         }
     }
 
@@ -106,11 +169,22 @@ body {
     }
 
     &__right-section {
-        flex-grow: 1;
+        width: 40%;
+   
 
-        &-banner {
-            width: 100%;
-            height: 100%;
+        @media only screen and (max-width: 56.25em) {
+            display: none;
         }
     }
+
+    &__bg-image {
+        background-image: url(../images/hero-desktop.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+}
+
+form.error .apparel__error-icon {
+    display: block;
 }

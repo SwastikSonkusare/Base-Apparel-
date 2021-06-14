@@ -24,6 +24,13 @@
     <div class="apparel__left-section">
         <img src="images/logo.svg" alt="Apparel Logo" class="apparel__logo">
 
+        <img
+						class="apparel__bg-mobile"
+						src="./images/hero-mobile.jpg"
+						alt="background mobile"
+					/>
+
+          <main class="apparel__main">
         <h1 class="apparel__header">
           <span class="apparel__header--1">we're</span>
           <span class="apparel__header--2">coming</span>
@@ -31,20 +38,24 @@
         </h1>
 
         <p class="apparel__paragraph">
-          Hello fellow shoppers! We're currently building our new fashion store. 
-          Add your email below to stay up-to-date with announcements and our launch deals.
+            Hello fellow shoppers! We're currently building our new fashion
+						store. Add your email below to stay up-to-date with announcements
+						and our launch deals.
         </p>
 
-        <div class="apparel__validate">
-          <input type="email" class="apparel__input" placeholder="Email Address">
+      </main>
+
+        <form class="apparel__validate">
+          <input type="email" class="apparel__input" placeholder="Email Address" required>
+          <img src="images/icon-error.svg" alt="Error icon" class="apparel__error-icon">
           <button type="submit" class="apparel__button">
             <img src="images/icon-arrow.svg" alt="Arrow" class="apparel__button-logo">
           </button>
-        </div>
+        </form>
     </div>
 
-    <div class="apparel__right-section">
-      <img src="images/hero-desktop.jpg" class="apparel__right-section-banner" alt="Banner" >
+    <div class="apparel__right-section apparel__bg-image">
+      <!-- <img src="images/hero-desktop.jpg" class="apparel__right-section-banner" alt="Banner" > -->
     </div>
   </div>
 
@@ -61,5 +72,8 @@
       Coded by <a href="#">Your Name Here</a>.
     </p>
   </footer> -->
+
+
+  <script defer src="index.js"></script>
 </body>
 </html>
