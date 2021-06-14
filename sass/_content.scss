@@ -16,10 +16,12 @@ html {
 
 body {
     box-sizing: border-box;
+    padding: 20rem;
 }
 
 .apparel {
     display: flex;
+    height: 100vh;
 
     @media only screen and (max-width: 56.25em) {
         flex-direction: column;
