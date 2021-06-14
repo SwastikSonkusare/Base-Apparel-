@@ -1,0 +1,116 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    box-sizing: border-box;
+}
+
+.apparel {
+    display: flex;
+
+
+    &__left-section {
+        background-image: url(../images/bg-pattern-desktop.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 6rem 10rem 10rem 15rem;
+
+        flex-basis: 55%;
+    }
+
+    &__header { 
+        margin-top: 12rem;
+
+        &--1 {
+            font-size: 5.8rem;
+            text-transform: uppercase;
+            font-weight: 300;
+            color: hsl(0, 36%, 70%);
+            font-family: "Josefin Sans";
+            display: block;
+            letter-spacing: 1rem;
+        }
+        
+        &--2, 
+        &--3 {
+            font-size: 6rem;
+            text-transform: uppercase;
+            font-family: "Josefin Sans";
+            font-weight: 400;
+            display: block;
+            letter-spacing: 1rem;
+            
+        }
+    }
+    
+    &__paragraph {
+        font-size: 1.6rem;
+        margin-top: 2rem;
+
+        color: hsl(0, 36%, 70%);
+        font-weight: 700;
+        font-family: "Josefin Sans";
+        line-height: 2;
+        
+    }
+
+    &__validate {
+        position: relative;
+        margin-top: 4rem;
+    }
+
+    &__input {
+        border: none;
+        border: 1px solid hsl(0, 36%, 70%);
+        padding: 1.2rem 14.2rem 1.2rem 2.5rem;
+        border-radius: 20px;
+        width: 100%;
+
+        &::placeholder {
+            color: hsl(0, 36%, 70%);
+            font-family: "Josefin Sans";
+            font-weight: 700;
+        }
+
+        &:active,
+        &:focus-visible {
+            outline: none;
+        }
+    }
+
+    &__button {
+        position: absolute;
+        top: 0;
+        right: 0;
+        border: none;
+        border-radius: 20px;
+        padding: 1rem 3.3rem;
+        // background-color: hsl(0, 93%, 68%);
+        background-image: linear-gradient( hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1); 
+        cursor: pointer;
+
+        // &-logo {
+        //     width: 2px;
+        //     height: 2px;
+        // }
+    }
+
+    &__right-section {
+        flex-grow: 1;
+
+        &-banner {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

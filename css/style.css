@@ -1,0 +1,75 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box; }
+
+.apparel {
+  display: flex; }
+  .apparel__left-section {
+    background-image: url(../images/bg-pattern-desktop.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 6rem 10rem 10rem 15rem;
+    flex-basis: 55%; }
+  .apparel__header {
+    margin-top: 12rem; }
+    .apparel__header--1 {
+      font-size: 5.8rem;
+      text-transform: uppercase;
+      font-weight: 300;
+      color: #ce9797;
+      font-family: "Josefin Sans";
+      display: block;
+      letter-spacing: 1rem; }
+    .apparel__header--2, .apparel__header--3 {
+      font-size: 6rem;
+      text-transform: uppercase;
+      font-family: "Josefin Sans";
+      font-weight: 400;
+      display: block;
+      letter-spacing: 1rem; }
+  .apparel__paragraph {
+    font-size: 1.6rem;
+    margin-top: 2rem;
+    color: #ce9797;
+    font-weight: 700;
+    font-family: "Josefin Sans";
+    line-height: 2; }
+  .apparel__validate {
+    position: relative;
+    margin-top: 4rem; }
+  .apparel__input {
+    border: none;
+    border: 1px solid #ce9797;
+    padding: 1.2rem 14.2rem 1.2rem 2.5rem;
+    border-radius: 20px;
+    width: 100%; }
+    .apparel__input::placeholder {
+      color: #ce9797;
+      font-family: "Josefin Sans";
+      font-weight: 700; }
+    .apparel__input:active, .apparel__input:focus-visible {
+      outline: none; }
+  .apparel__button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none;
+    border-radius: 20px;
+    padding: 1rem 3.3rem;
+    background-image: linear-gradient(#f8bfbf, #ee8c8c);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+    cursor: pointer; }
+  .apparel__right-section {
+    flex-grow: 1; }
+    .apparel__right-section-banner {
+      width: 100%;
+      height: 100%; }
