@@ -8,7 +8,8 @@
 
 html {
     font-size: 62.5%;
-
+    min-height: 100vh;
+    
     @media only screen and (max-width: 33.25em) {
         font-size: 50%;
     }
@@ -16,7 +17,13 @@ html {
 
 body {
     box-sizing: border-box;
-    padding: 20rem;
+    background-image: linear-gradient(
+        135deg,
+		hsl(0, 0%, 100%),
+		hsl(0, 100%, 98%)
+        );
+        
+    min-height: 100vh;
 }
 
 .apparel {
@@ -68,13 +75,13 @@ body {
             justify-content: center;
             align-items: center;
             text-align: center;
-    }
-
+        }
     }
 
     &__header { 
         margin-top: 12rem;
-
+        animation: moveInLeft 2s ease-in;
+        
         &--1 {
             font-size: 5.8rem;
             text-transform: uppercase;
@@ -83,8 +90,6 @@ body {
             font-family: "Josefin Sans";
             display: block;
             letter-spacing: 1rem;
-
-      
 
         }
         
@@ -103,6 +108,7 @@ body {
     &__paragraph {
         font-size: 1.6rem;
         margin-top: 2rem;
+        animation: moveInRight 2s ease-in-out;
 
         color: hsl(0, 36%, 70%);
         font-weight: 700;
@@ -189,4 +195,36 @@ body {
 
 form.error .apparel__error-icon {
     display: block;
+}
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+
+    50% {
+        transform: translateX(2rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(10rem);
+    }
+
+    50% {
+        transform: translateX(-2rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
