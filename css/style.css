@@ -15,18 +15,16 @@ html {
 body {
   box-sizing: border-box;
   background-image: linear-gradient(135deg, white, #fff5f5);
-  min-height: 100vh; }
+  min-height: 100%;
+  padding: 1.5rem; }
 
 .apparel {
   display: flex;
-  height: 100vh; }
+  min-height: 100vh; }
   @media only screen and (max-width: 56.25em) {
     .apparel {
       flex-direction: column; } }
   .apparel__left-section {
-    background-image: url(../images/bg-pattern-desktop.svg);
-    background-size: cover;
-    background-repeat: no-repeat;
     padding: 6rem 20rem 10rem 15rem;
     width: 60%; }
     @media only screen and (max-width: 56.25em) {
@@ -79,7 +77,8 @@ body {
   .apparel__validate {
     position: relative;
     margin-top: 4rem;
-    width: 35vw; }
+    width: 35vw;
+    animation: moveInBottom 2s ease-in; }
     @media only screen and (max-width: 56.25em) {
       .apparel__validate {
         width: 65vw;
@@ -112,6 +111,8 @@ body {
     background-image: linear-gradient(#f8bfbf, #ee8c8c);
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
     cursor: pointer; }
+    .apparel__button:hover {
+      background-image: linear-gradient(#8a0f0f, #e23c3c); }
   .apparel__right-section {
     width: 40%; }
     @media only screen and (max-width: 56.25em) {
@@ -145,3 +146,13 @@ form.error .apparel__error-icon {
   100% {
     opacity: 1;
     transform: translateX(0); } }
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(10rem); }
+  50% {
+    transform: translateY(-1rem); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
